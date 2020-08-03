@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" style="height:100%;">
+    <head>
+        <title>D I Q U E</title>
+          <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script th:href="@{/js/bootstrap.min.js}"></script>
+  <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script th:src="@{/js/highcharts.js}"></script>
+<!-- <script th:src="@{/js/jquery.js}"></script> -->
+<script th:src="@{/js/menu.js}"></script>
+<script type="text/javascript">
+</script>
+   <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="static/css/menu.css" th:href="@{/css/menu.css}">
+    </head>
+    <body style="height:90%;">
+          <div class="container-fluid ">
+			  <div class="row">
+			    <div class="col">
+			     
+<!-- 			      <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1> -->
+			    </div>
+			    <div class="col-2 d-flex flex-row-reverse">
+					  <form th:action="@{/logout}" method="post">
+					    <input type="submit" value="Cerrar Sesion" class="btn btn-secondary btn-sm"/>
+					</form>
+			    </div>
+			  </div>
+		</div>
+        
+       
+        
+        
+      <div class="container-fluid h-100" >
+			  <div class="row h-100">
+			  
+			    <div class="col h-100 mycustombox m-2" >
+			        <center><h2 class="myfont" id="divTitulo">D I Q U E</h2>  </center>
+			      <br/><br/><br/><br/>
+			      <center>
+			       <button id="btnCapturar" value="Capturar" name="capturar" class="btn btn-primary">Capturar</button>
+			       <br/>
+			       <br/>
+			       <button id="btnReiniciar" value="reiniciar" name="reiniciar" class="btn btn-primary">Reiniciar</button>
+			       </center>
+			        <br/>
+			       <br/>
+			        <br/>
+			       <br/>
+			        <br/>
+			       <br/>
+			        <br/>
+			        <div id="modo" style="text-align:center;">
+			        <b>Modo</b>
+			        <br/>
+			       <b class="fontmodos" style="color:#0083DE ;">I D S</b>
+					<label class="switch">
+					  <input type="checkbox" id="inputModo">
+					  <span class="slider round"></span>
+					</label>
+					<b class="fontmodos" style="color:#E3DE25 ;">I P S</b>
+					</div>	
+			        <br/>
+			       <br/>
+			        <br/>
+			       <br/>
+<!-- 			       <center><a th:href="@{/users}"> Admin Usuarios</a></center> -->
+			    </div>
+			    
+			    <div class="col-10 h-100">
+				      <div class="row d-flex flex-column h-50 m-2 mycustombox">
+				      	<div id="containerGrafica" style="height: 400px"></div>
+				      </div>
+				        <div class="row d-flex flex-column m-2 mycustombox">
+				      	<table id="packetList" class="display" style="width: 100%"></table>
+				      </div>
+			
+			    </div>
+			    
+			  </div>
+		</div>
+    </body>
+</html>
